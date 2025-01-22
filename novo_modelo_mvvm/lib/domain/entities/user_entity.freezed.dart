@@ -19,9 +19,9 @@ User _$UserFromJson(Map<String, dynamic> json) {
     case 'default':
       return _User.fromJson(json);
     case 'notLogged':
-      return _NotLoggedUser.fromJson(json);
+      return NotLoggedUser.fromJson(json);
     case 'logged':
-      return _LoggedUser.fromJson(json);
+      return LoggedUser.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'User',
@@ -62,22 +62,22 @@ mixin _$User {
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
     TResult Function(_User value) $default, {
-    required TResult Function(_NotLoggedUser value) notLogged,
-    required TResult Function(_LoggedUser value) logged,
+    required TResult Function(NotLoggedUser value) notLogged,
+    required TResult Function(LoggedUser value) logged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
     TResult? Function(_User value)? $default, {
-    TResult? Function(_NotLoggedUser value)? notLogged,
-    TResult? Function(_LoggedUser value)? logged,
+    TResult? Function(NotLoggedUser value)? notLogged,
+    TResult? Function(LoggedUser value)? logged,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_User value)? $default, {
-    TResult Function(_NotLoggedUser value)? notLogged,
-    TResult Function(_LoggedUser value)? logged,
+    TResult Function(NotLoggedUser value)? notLogged,
+    TResult Function(LoggedUser value)? logged,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -242,8 +242,8 @@ class _$UserImpl implements _User {
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
     TResult Function(_User value) $default, {
-    required TResult Function(_NotLoggedUser value) notLogged,
-    required TResult Function(_LoggedUser value) logged,
+    required TResult Function(NotLoggedUser value) notLogged,
+    required TResult Function(LoggedUser value) logged,
   }) {
     return $default(this);
   }
@@ -252,8 +252,8 @@ class _$UserImpl implements _User {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
     TResult? Function(_User value)? $default, {
-    TResult? Function(_NotLoggedUser value)? notLogged,
-    TResult? Function(_LoggedUser value)? logged,
+    TResult? Function(NotLoggedUser value)? notLogged,
+    TResult? Function(LoggedUser value)? logged,
   }) {
     return $default?.call(this);
   }
@@ -262,8 +262,8 @@ class _$UserImpl implements _User {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_User value)? $default, {
-    TResult Function(_NotLoggedUser value)? notLogged,
-    TResult Function(_LoggedUser value)? logged,
+    TResult Function(NotLoggedUser value)? notLogged,
+    TResult Function(LoggedUser value)? logged,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -320,7 +320,7 @@ class __$$NotLoggedUserImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$NotLoggedUserImpl implements _NotLoggedUser {
+class _$NotLoggedUserImpl implements NotLoggedUser {
   const _$NotLoggedUserImpl({final String? $type})
       : $type = $type ?? 'notLogged';
 
@@ -389,8 +389,8 @@ class _$NotLoggedUserImpl implements _NotLoggedUser {
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
     TResult Function(_User value) $default, {
-    required TResult Function(_NotLoggedUser value) notLogged,
-    required TResult Function(_LoggedUser value) logged,
+    required TResult Function(NotLoggedUser value) notLogged,
+    required TResult Function(LoggedUser value) logged,
   }) {
     return notLogged(this);
   }
@@ -399,8 +399,8 @@ class _$NotLoggedUserImpl implements _NotLoggedUser {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
     TResult? Function(_User value)? $default, {
-    TResult? Function(_NotLoggedUser value)? notLogged,
-    TResult? Function(_LoggedUser value)? logged,
+    TResult? Function(NotLoggedUser value)? notLogged,
+    TResult? Function(LoggedUser value)? logged,
   }) {
     return notLogged?.call(this);
   }
@@ -409,8 +409,8 @@ class _$NotLoggedUserImpl implements _NotLoggedUser {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_User value)? $default, {
-    TResult Function(_NotLoggedUser value)? notLogged,
-    TResult Function(_LoggedUser value)? logged,
+    TResult Function(NotLoggedUser value)? notLogged,
+    TResult Function(LoggedUser value)? logged,
     required TResult orElse(),
   }) {
     if (notLogged != null) {
@@ -427,10 +427,10 @@ class _$NotLoggedUserImpl implements _NotLoggedUser {
   }
 }
 
-abstract class _NotLoggedUser implements User {
-  const factory _NotLoggedUser() = _$NotLoggedUserImpl;
+abstract class NotLoggedUser implements User {
+  const factory NotLoggedUser() = _$NotLoggedUserImpl;
 
-  factory _NotLoggedUser.fromJson(Map<String, dynamic> json) =
+  factory NotLoggedUser.fromJson(Map<String, dynamic> json) =
       _$NotLoggedUserImpl.fromJson;
 }
 
@@ -494,7 +494,7 @@ class __$$LoggedUserImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$LoggedUserImpl implements _LoggedUser {
+class _$LoggedUserImpl implements LoggedUser {
   const _$LoggedUserImpl(
       {required this.id,
       required this.name,
@@ -596,8 +596,8 @@ class _$LoggedUserImpl implements _LoggedUser {
   @optionalTypeArgs
   TResult map<TResult extends Object?>(
     TResult Function(_User value) $default, {
-    required TResult Function(_NotLoggedUser value) notLogged,
-    required TResult Function(_LoggedUser value) logged,
+    required TResult Function(NotLoggedUser value) notLogged,
+    required TResult Function(LoggedUser value) logged,
   }) {
     return logged(this);
   }
@@ -606,8 +606,8 @@ class _$LoggedUserImpl implements _LoggedUser {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
     TResult? Function(_User value)? $default, {
-    TResult? Function(_NotLoggedUser value)? notLogged,
-    TResult? Function(_LoggedUser value)? logged,
+    TResult? Function(NotLoggedUser value)? notLogged,
+    TResult? Function(LoggedUser value)? logged,
   }) {
     return logged?.call(this);
   }
@@ -616,8 +616,8 @@ class _$LoggedUserImpl implements _LoggedUser {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>(
     TResult Function(_User value)? $default, {
-    TResult Function(_NotLoggedUser value)? notLogged,
-    TResult Function(_LoggedUser value)? logged,
+    TResult Function(NotLoggedUser value)? notLogged,
+    TResult Function(LoggedUser value)? logged,
     required TResult orElse(),
   }) {
     if (logged != null) {
@@ -634,15 +634,15 @@ class _$LoggedUserImpl implements _LoggedUser {
   }
 }
 
-abstract class _LoggedUser implements User {
-  const factory _LoggedUser(
+abstract class LoggedUser implements User {
+  const factory LoggedUser(
       {required final String id,
       required final String name,
       required final String email,
       required final String token,
       required final String refreshToken}) = _$LoggedUserImpl;
 
-  factory _LoggedUser.fromJson(Map<String, dynamic> json) =
+  factory LoggedUser.fromJson(Map<String, dynamic> json) =
       _$LoggedUserImpl.fromJson;
 
   String get id;
