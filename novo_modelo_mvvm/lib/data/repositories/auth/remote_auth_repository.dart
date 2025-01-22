@@ -8,8 +8,6 @@ import 'package:novo_modelo_mvvm/domain/entities/user_entity.dart';
 import 'package:novo_modelo_mvvm/domain/validators/credential_validator.dart';
 import 'package:novo_modelo_mvvm/utils/validation/lucid_validation_extension.dart';
 import 'package:result_dart/result_dart.dart';
-import 'package:result_dart/src/types.dart';
-import 'package:result_dart/src/unit.dart';
 
 class RemoteAuthRepository implements AuthRepository {
   final _streamController = StreamController<User>.broadcast();
