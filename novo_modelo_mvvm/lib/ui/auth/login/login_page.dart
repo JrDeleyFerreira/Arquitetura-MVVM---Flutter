@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:novo_modelo_mvvm/config/dependencies.dart';
 import 'package:novo_modelo_mvvm/domain/validators/credential_validator.dart';
-import 'package:novo_modelo_mvvm/main.dart';
-import 'package:novo_modelo_mvvm/ui/auth/viewmodel/login_viewmodel.dart';
+import 'package:novo_modelo_mvvm/ui/auth/login/viewmodel/login_viewmodel.dart';
 import 'package:result_command/result_command.dart';
-import 'package:routefly/routefly.dart';
 
-import '../../domain/dtos/credentials.dart';
+import '../../../domain/dtos/credentials.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -28,9 +26,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _listenable() {
-    if (viewModel.loginCommand.isSuccess) {
-      Routefly.navigate(routePaths.home);
-    } else if (viewModel.loginCommand.isFailure) {
+    if (viewModel.loginCommand.isFailure) {
       final erro = viewModel.loginCommand.value as FailureCommand;
 
       final snackbar = SnackBar(
